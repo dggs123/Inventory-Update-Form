@@ -1,5 +1,6 @@
 # Inventory-Update-Form
-Simple form application based on django.
+Simple and beautiful form application based on django/python.
+
 # Setup and running
 Clone the repo and cd to the folder
 ```
@@ -21,5 +22,5 @@ $ python manage.py makemigrations
 $ python manage.py migrate
 $ python manage.py runserver
 ```
-Now the website should be available on localhost:8000
+Now the website should be available on 127.0.0.1:8000
 # ScreenShots
