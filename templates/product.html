@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block content %}
+<header class="cd-header">
+		<h1>View Product</h1>
+		<a class="link-1" href="/addproduct">Add Product</a>
+	</header>
+<main class="cd-main-content">
+		<div class="cd-tab-filter-wrapper">
+			<div class="cd-tab-filter">
+				<ul class="cd-filters">
+					<li class="placeholder"> 
+						<a data-type="all" href="#0">Price: Low To High</a> <!-- selected option on mobile -->
+					</li> 
+					<li class="sort" data-sort="myorder:desc"><a class="selected" href="#0" data-type="all">Price: Low To High</a></li>
+					<li class="sort" data-sort="myorder:asc"><a href="#0" data-type="color-1">Price: High To Low</a></li>
+				
+				</ul> <!-- cd-filters -->
+			</div> <!-- cd-tab-filter -->
+		</div> <!-- cd-tab-filter-wrapper -->
+
+		<section class="cd-gallery">
+			<ul>
+			{% for p in products %}
+				<li class="mix list {{ p.product_type }}" data-myorder="{{ p.price }}"><img src="{{ p.cover }}" alt="Image 1">
+				<hr>
+				<p class="title">{{ p.name }}</p>
+				<div class="row" style="margin-bottom:10px;">
+				    <div class="col-xs-6 price">
+				      <i class="fa fa-inr" aria-hidden="true"></i>
+				      {{ p.price }}
+				    </div>
+				    <div class="col-xs-6 price">
+				      {{ p.quantity }} Left
+				    </div>
+				  </div>
+				</li>
+				{% endfor %}
+				<li class="gap"></li>
+				<li class="gap"></li>
+				<li class="gap"></li>
+			</ul>
+			<div class="cd-fail-message">No results found</div>
+		</section> <!-- cd-gallery -->
+
+		<div class="cd-filter">
+			<form>
+
+				<div class="cd-filter-block">
+
+					<ul class="cd-filter-content cd-filters list">
+						<li>
+							<input class="filter" data-filter=".tv" type="checkbox" id="checkbox1">
+			    			<label class="checkbox-label" for="checkbox1">TV</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".refrigerator" type="checkbox" id="checkbox2">
+							<label class="checkbox-label" for="checkbox2">Refrigerator</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".ac" type="checkbox" id="checkbox3">
+							<label class="checkbox-label" for="checkbox3">AC</label>
+						</li>
+						<li>
+							<input class="filter" data-filter=".washing_machine" type="checkbox" id="checkbox3">
+							<label class="checkbox-label" for="checkbox3">Washing Machine</label>
+						</li>
+					</ul> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+			</form>
+
+			<a href="#0" class="cd-close">Close</a>
+		</div> <!-- cd-filter -->
+
+		<a href="#0" class="cd-filter-trigger">Product Filters</a>
+
+	</main> <!-- cd-main-content -->
+
+	{% endblock %}
+
+{% block js %}
+
+	<script src="/static/js/jquery-2.1.1.js"></script>
+<script src="/static/js/jquery.mixitup.min.js"></script>
+<script src="/static/js/main.js"></script> <!-- Resource jQuery -->
+    {% endblock %}
