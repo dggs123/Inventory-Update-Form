@@ -3,7 +3,7 @@ Simple form application based on django.
 # Setup and running
 Clone the repo and cd to the folder
 ```
-$ git clone https://github.com/dggs123/flashpoint
+$ https://github.com/dggs123/Inventory-Update-Form
 $ cd Inventory-Update-Form
 ```
 Install and setup pip and Virtualenv. This may take sometime depending on your internet speed.
