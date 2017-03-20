@@ -4,7 +4,7 @@ Simple and beautiful form application based on django/python.
 # Setup and running
 Clone the repo and cd to the folder
 ```
-$ https://github.com/dggs123/Inventory-Update-Form
+$ git clone https://github.com/dggs123/Inventory-Update-Form
 $ cd Inventory-Update-Form
 ```
 Install and setup pip and Virtualenv. This may take sometime depending on your internet speed.
@@ -15,6 +15,7 @@ $ pip install virtualenv
 Commands to run server
 ```
 $ virtualenv .
+$ source bin/activate
 $ pip install -r requirements.txt
 # This may take few minutes, go get some coffee until then
 
