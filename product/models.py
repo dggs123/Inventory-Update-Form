@@ -15,7 +15,7 @@ def upload_location(instance, filename):
     Which will give us the most recently created Model instance
     We add 1 to it, so we get what should be the same id as the the post we are creating.
     """
-    return "%s/%s" %(instance.name, filename)
+    return "%s" %(filename)
 
 class Product(models.Model):
     GAME_LEVEL = (('Hard', 'Hard'),('Normal', 'Normal'))
