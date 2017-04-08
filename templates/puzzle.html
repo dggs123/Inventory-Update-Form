@@ -45,8 +45,10 @@
                 $('.canvas').show();
                 $('.puzzle-image').hide();
                 $('.logo').hide();
+                $('body').css({overflowY: "hidden"})
             }
             else {
+                $('body').css({overflowY: "scroll"})
                 $('.canvas').hide();
                 $('.puzzle-image').show();
                 $('.logo').show();
@@ -54,7 +56,7 @@
         });
 
         var charmsWidth = $('.charms').css('width').replace('px', '');
-        $('.puzzle-image').css('margin', '-' + imgHeight/2 + 'px 0 0 -' + imgWidth/2 + 'px');
+        $('.puzzle-image').css('margin', '-' + 200 + 'px 0 0 -' + imgWidth/2 + 'px');
 
         function onMouseDown(event) {
             puzzle.pickTile();
@@ -102,6 +104,11 @@
             if(this.puzzleImage.width>800)
             {
             this.puzzleImage.size = new Size(config.imgWidth,config.imgHeight);
+            }
+            else
+            {
+                config.imgWidth = this.puzzleImage.width;
+                config.imgHeight = this.puzzleImage.height;
             }
             this.puzzleImage.position = view.center;
             this.puzzleImage.visible = false;

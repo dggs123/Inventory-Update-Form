@@ -13,9 +13,8 @@ def index(request):
 	if request.method == 'POST':
 	# create a form instance and populate it with data from the request:
 		if request.user.is_authenticated():
-			form = ProductForm(request.POST)
-			# check whether it's valid:
-			print form.data['photo']
+			form = ProductForm(request.POST, request.FILES)
+			# print request.FILES['photo']
 			if form.is_valid():
 				new_game = form.save()
 				messages.success(request, 'Game Added Sucessfully')
