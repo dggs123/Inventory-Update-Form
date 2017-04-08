@@ -11,7 +11,7 @@
         var scrollMargin = 32;
         
 
-        $('#puzzle-image').attr('src', '{{ puzzle.photo }}');
+        $('#puzzle-image').attr('src', '{{ puzzle.photo.url }}');
 
         var imgWidth = $('.puzzle-image').css('width').replace('px', '');
         var imgHeight = $('.puzzle-image').css('height').replace('px', '');
@@ -99,6 +99,10 @@
             this.imgName = config.imgName;
             this.shadowWidth = config.shadowWidth;
             this.puzzleImage = new Raster(config.imgName);
+            if(this.puzzleImage.width>800)
+            {
+            this.puzzleImage.size = new Size(config.imgWidth,config.imgHeight);
+            }
             this.puzzleImage.position = view.center;
             this.puzzleImage.visible = false;
             this.tileWidth = config.tileWidth;
@@ -526,7 +530,7 @@
         </div>
       </div>
     </div>
-    <img width="800" id="puzzle-image" class="puzzle-image" style="display: none;" src="{{ puzzle.photo }}"/>
+    <img width="800" id="puzzle-image" class="puzzle-image" style="display: none;" src="{{ puzzle.photo.url }}"/>
     <img width="128" height="128" id="empty" style="display: none;" src=" {% if puzzle.level == 'Normal' %}/static/content/images/empty.png{% else %}/static/content/images/empty1.png{% endif %}" />
     {% endblock %}
 
