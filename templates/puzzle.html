@@ -99,10 +99,6 @@
             this.imgName = config.imgName;
             this.shadowWidth = config.shadowWidth;
             this.puzzleImage = new Raster(config.imgName);
-            if(this.puzzleImage.width>800)
-            {
-            this.puzzleImage.size = new Size(config.imgWidth,config.imgHeight);
-            }
             this.puzzleImage.position = view.center;
             this.puzzleImage.visible = false;
             this.tileWidth = config.tileWidth;
