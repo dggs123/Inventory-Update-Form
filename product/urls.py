@@ -4,6 +4,6 @@ from .views import *
 
 urlpatterns = [
 			url('^$', index, name='home'),
-			url('^addproduct$', addproduct, name='addproduct'),
+			url('^play/(?P<id>\d+)/$', play, name='play'),
 
 			]

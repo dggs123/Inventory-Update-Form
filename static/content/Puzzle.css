@@ -1,0 +1,86 @@
+﻿body 
+{
+    background-color: #fff;
+    overflow: hidden;   
+    margin: 0;
+}
+a
+{
+    color: black;
+    text-decoration-style: none;
+}
+a:hover{
+    color: black;
+
+    text-decoration: none;
+}
+
+.logo
+{
+    overflow: hidden;   
+    position: absolute;
+    left: 50%;
+    margin: 0 0 0 -516px;
+    display: none;
+}
+
+canvas
+{
+    overflow: hidden;   
+    position: absolute;
+}
+
+.puzzle-image
+{
+    overflow: hidden;   
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+
+.zoomOut1,
+.help
+{
+    z-index: 100;
+    position: absolute;
+    cursor: pointer;
+}
+
+.charms
+{
+
+ }
+
+.a2
+{
+    padding: 20px;
+}
+
+.zoomOut1:hover,
+.help:hover
+{
+    opacity: 1.0;
+}
+
+.help
+{
+ margin-right: 100px;
+position: absolute;
+right: 0;
+font-size:50px;
+}
+
+.zoomOut1
+{
+ margin-right: 200px;
+position: absolute;
+right: 0;
+font-size:50px;
+}
+
+h1
+{
+    text-align: center;
+    font-weight: bold;
+}

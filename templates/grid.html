@@ -1,0 +1,93 @@
+      {% extends "base.html" %}
+      {% load crispy_forms_tags %}
+     {% block "canvas_js" %}
+    <style type="text/css">
+        body
+        {
+            overflow: scroll;
+        }
+        .change2
+        {
+            display: none;
+        }
+        .zoomOut1
+        {
+            margin-right: 100px;
+        }
+    </style>
+    {% endblock %}
+
+    {% block content %}
+   <div class="charms" style="overflow:hidden;">
+            <div class="row a1">
+        <div class="col-sm-4">
+         
+         <h1><a href="/">Jigsaw Puzzle</a></h1>
+        </div>
+        <div class="col-sm-8 a2">
+            <i width="50" height="50" class="fa fa-plus zoomOut1" aria-hidden="true"></i>
+        </div>
+      </div>
+      </div>
+    <div class="container-fluid {% if messages %}change2{% endif %}" id="n1" style="background-color:rgba(0, 0, 0, 0.08); border-top-style:solid;padding-top:50px;margin-top:30px;">
+
+        <div class="row" >
+        {% for p in puzzles %}
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="/play/{{ p.id }}">
+                    <img class="img-responsive" src="{{ p.photo }}" alt="">
+                </a>
+            </div>
+        {% endfor %}
+        </div>
+
+    </div>
+     <div class="{% if not messages %}change2{% endif %}" id="n2" style="background-color:rgba(0, 0, 0, 0.08); border-top-style:solid; margin-top:30px; height:800px;">
+ <!-- Modal -->
+ <header class="cd-header">
+ {% if user.is_authenticated %}
+        <h1>Add Product</h1>
+        {% else %}
+        <h1>Admin Login</h1>
+        {% endif %}
+    </header>
+    
+     {% for message in messages %}
+     {% if message.tags == 'error' %}
+     
+    <div class="alert alert-danger alert-dismissable">
+     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Error!</strong> {{ message }}
+    </div>
+     {% else %}
+    <div class="alert alert-success alert-dismissable">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ message }}
+    </div>
+    {% endif %}
+    {% endfor %}
+
+
+ <div class="container" style="width:50%;">
+
+     
+        <form method="POST" action="/">
+        
+        <div class="modal-body">
+            {% csrf_token %}
+            {{ form|crispy }}
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-default" value="submit">Submit</button>
+        </div>
+        </form>
+     </div>
+     </div>
+     <script type="text/javascript">
+       $(".zoomOut1").click(function(){
+        console.log("h")
+        $("#n2").toggleClass('change2');
+        $("#n1").toggleClass('change2');
+       });
+    </script>
+{% endblock %}

@@ -1,25 +1,20 @@
 from django import forms
 from django.forms import ModelForm
+from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
+
+from crispy_forms.helper import FormHelper
+from crispy_forms import layout, bootstrap
 
 from .models import Product
 
 
 class ProductForm(ModelForm):
-
-    def clean_name(self):
-        name = str(self.cleaned_data['name'])
-
-        if len(Product.objects.filter(name=name))>0:
-            raise forms.ValidationError('Product Already Exist')
-
-        return name
-
     class Meta:
         model = Product
-        fields = ['name', 'price', 'quantity', 'product_type', 'cover']
-        labels = {
-            'price': _('Price'),
-            'cover': _('Cover Image'),
+        fields = ["name","photo","level"]
 
-        }
+class UserForm(ModelForm):
+    class Meta:
+        model = User
+        fields = ['username', 'password']
