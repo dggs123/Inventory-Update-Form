@@ -20,5 +20,5 @@ def upload_location(instance, filename):
 class Product(models.Model):
     GAME_LEVEL = (('Hard', 'Hard'),('Normal', 'Normal'))
     name = models.CharField(max_length=100)
-    photo = models.URLField(blank=True, default='', help_text='image link')
+    photo = models.URLField(default='', help_text='image link')
     level = models.CharField(max_length=20, choices=GAME_LEVEL, default='Normal')
