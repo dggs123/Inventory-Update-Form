@@ -26,11 +26,11 @@ $ python manage.py runserver
 Now the website should be available on 127.0.0.1:8000
 # ScreenShots
 <p align="center">
-<img src="https://firebasestorage.googleapis.com/v0/b/project-228499762619542864.appspot.com/o/Internship%20Screen%20Shots%2Fscreen1.png?alt=media&token=66b8249d-17fd-4236-b46a-3d7fa25b9458" width="500"/>
+<img src="https://firebasestorage.googleapis.com/v0/b/project-228499762619542864.appspot.com/o/Internship%20Screen%20Shots%2Fscreen1.png?alt=media&token=82174957-c41f-405d-8148-f42ef1d9e2c7" width="500"/>
 </p>
 <p align="center">
-<img src="https://firebasestorage.googleapis.com/v0/b/project-228499762619542864.appspot.com/o/Internship%20Screen%20Shots%2Fscreen2.png?alt=media&token=7171513a-0552-448e-92ab-f54ffe4b76b7" width="500"/>
+<img src="https://firebasestorage.googleapis.com/v0/b/project-228499762619542864.appspot.com/o/Internship%20Screen%20Shots%2Fscreen11.png?alt=media&token=b3f0a1a3-5f22-4eaa-80de-af0ef6167cc8" width="500"/>
 </p>
 <p align="center">
-<img src="https://firebasestorage.googleapis.com/v0/b/project-228499762619542864.appspot.com/o/Internship%20Screen%20Shots%2FScreenshot%20from%202017-03-19%2021-31-53.png?alt=media&token=6531c299-1668-472d-b314-2e94835d9d46" width="500"/>
+<img src="https://firebasestorage.googleapis.com/v0/b/project-228499762619542864.appspot.com/o/Internship%20Screen%20Shots%2Fscreen12.png?alt=media&token=8d7b39c7-2764-4fb5-b05a-32611018cde9" width="500"/>
 </p>
