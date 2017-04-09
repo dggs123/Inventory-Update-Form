@@ -1,11 +1,11 @@
 # Inventory-Update-Form
-Simple and beautiful form application based on django/python.
+Jigsaw puzzle based on django/python.
 
 # Setup and running
 Clone the repo and cd to the folder
 ```
-$ git clone https://github.com/dggs123/Inventory-Update-Form
-$ cd Inventory-Update-Form
+$ git clone https://github.com/dggs123/jig-Saw
+$ cd jig-Saw
 ```
 Install and setup pip and Virtualenv. This may take sometime depending on your internet speed.
 ```
