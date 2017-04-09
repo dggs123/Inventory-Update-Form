@@ -1,4 +1,4 @@
-# Inventory-Update-Form
+# Jigsaw Puzzle Game
 Jigsaw puzzle based on django/python.
 
 # Setup and running
